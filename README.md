@@ -13,12 +13,14 @@ How to run:
     6. After stop recording, type '3' will stop the program.
     
     
-Install python 3.6: go to the following website and download python any version equal or larger than 3.6.3
+#Install python 3.6: 
+                    go to the following website and download python any version equal or larger than 3.6.3
                     https://www.python.org/downloads/
                     run the .exe file you just downloaded. Choose add python to your computer when installation.
                     Choose add python to your computer when installation. Choose add python to your computer when installation.
                     Choose add python to your computer when installation.
                     
-Install pywin32: After you have installed the python 3.6. Go to the following website and download 'pywin32-221.win32-py3.6.exe':
+#Install pywin32: 
+                After you have installed the python 3.6. Go to the following website and download 'pywin32-221.win32-py3.6.exe':
                 https://sourceforge.net/projects/pywin32/files/pywin32/Build%20221/
                 Download 'pywin32-221.win32-py3.6.exe' then run and install it. 
