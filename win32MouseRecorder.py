@@ -2,10 +2,15 @@
 import win32api
 import win32con
 import time
+from win32api import GetSystemMetrics
 
+wide = GetSystemMetrics(0)
+height = GetSystemMetrics(1)
 mouseDown=2
 mouseUp=1
 move=0
+#wide=1440
+#height=2560
 
 def record(ST=0.01):
     f=open('record.txt','w')
@@ -77,18 +82,18 @@ def play(loopTime = -1, sleepTime = 0.1):
             time.sleep(float(currentEvent[0]))
             if int(currentEvent[1])==0 :
                 win32api.mouse_event(win32con.MOUSEEVENTF_MOVE | win32con.MOUSEEVENTF_ABSOLUTE,
-                int(int(currentEvent[3])/2560*65535),int(int(currentEvent[4])/1080*65535),0,0)
+                int(int(currentEvent[3])/wide*65535),int(int(currentEvent[4])/height*65535),0,0)
             if int(currentEvent[1])==1 :
                 win32api.mouse_event(win32con.MOUSEEVENTF_MOVE | win32con.MOUSEEVENTF_ABSOLUTE,
-                int(int(currentEvent[3])/2560*65535),int(int(currentEvent[4])/1080*65535),0,0)
+                int(int(currentEvent[3])/wide*65535),int(int(currentEvent[4])/height*65535),0,0)
                 if int(currentEvent[2])==mouseDown:
                     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN | win32con.MOUSEEVENTF_ABSOLUTE,
-                    int(int(currentEvent[3])/2560*65535),int(int(currentEvent[4])/1080*65535),0,0)
+                    int(int(currentEvent[3])/wide*65535),int(int(currentEvent[4])/height*65535),0,0)
                     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP | win32con.MOUSEEVENTF_ABSOLUTE,
-                    int(int(currentEvent[3])/2560*65535),int(int(currentEvent[4])/1080*65535),0,0)
+                    int(int(currentEvent[3])/wide*65535),int(int(currentEvent[4])/height*65535),0,0)
                 if int(currentEvent[2])==mouseUp :
                     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP | win32con.MOUSEEVENTF_ABSOLUTE,
-                    int(int(currentEvent[3])/2560*65535),int(int(currentEvent[4])/1080*65535),0,0)
+                    int(int(currentEvent[3])/wide*65535),int(int(currentEvent[4])/height*65535),0,0)
         time.sleep(sleepTime)
 
 def _main():
