@@ -89,8 +89,8 @@ def play(loopTime = -1, sleepTime = 0.1):
                 if int(currentEvent[2])==mouseDown:
                     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN | win32con.MOUSEEVENTF_ABSOLUTE,
                     int(int(currentEvent[3])/wide*65535),int(int(currentEvent[4])/height*65535),0,0)
-                    win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP | win32con.MOUSEEVENTF_ABSOLUTE,
-                    int(int(currentEvent[3])/wide*65535),int(int(currentEvent[4])/height*65535),0,0)
+                    #win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP | win32con.MOUSEEVENTF_ABSOLUTE,
+                    #int(int(currentEvent[3])/wide*65535),int(int(currentEvent[4])/height*65535),0,0)
                 if int(currentEvent[2])==mouseUp :
                     win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP | win32con.MOUSEEVENTF_ABSOLUTE,
                     int(int(currentEvent[3])/wide*65535),int(int(currentEvent[4])/height*65535),0,0)
